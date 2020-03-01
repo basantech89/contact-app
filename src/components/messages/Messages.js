@@ -1,13 +1,12 @@
-import React, { useEffect, useReducer } from "react";
+import React, { useEffect, useState } from "react";
 import { Table } from 'reactstrap';
 import { fetchSms } from "../../utils/apiCaller";
-import { reducer, addMessages } from "../../messages";
 
 const Messages = () => {
-	const [messages, dispatch] = useReducer(reducer, []);
+	const [messages, dispatch] = useState([]);
 	useEffect(() => {
 		fetchSms()
-			.then(messages => dispatch(addMessages(messages)))
+			.then(messages => dispatch(messages))
 			.catch(error => console.log(error));
 	}, []);
 
