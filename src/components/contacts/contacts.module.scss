@@ -1,0 +1,30 @@
+.table {
+  height: 90vh;
+}
+
+.row:hover {
+  cursor: pointer;
+  font-size: larger;
+  background-color: #6fa4e9;
+  transition: all 300ms ease-in;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+.picture {
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.card-text {
+  display: grid;
+  grid-template-columns: 10% 50%;
+  margin-top: 20px;
+}
+
+.work-img {
+  height: 40%;
+  margin-right: 5px;
+}
