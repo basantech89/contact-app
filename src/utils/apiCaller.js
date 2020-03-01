@@ -1,6 +1,6 @@
 const fetchSms = async () => {
   try {
-    const response = await fetch('messages');
+    const response = await fetch(`${process.env.REACT_APP_BASE_URL}messages`);
     return await response.json();
   } catch (e) {
     console.error(e);
@@ -10,7 +10,7 @@ const fetchSms = async () => {
 
 const sendSms = async (msg) => {
   try {
-    const response = await fetch('messages', {
+    const response = await fetch(`${process.env.REACT_APP_BASE_URL}messages`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
