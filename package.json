@@ -22,7 +22,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint --ext .jsx,.js src/ --fix"
   },
-  "proxy": "http://localhost:3000",
+  "proxy": "https://server-contact-app.herokuapp.com",
   "eslintConfig": {
     "extends": "react-app"
   },
