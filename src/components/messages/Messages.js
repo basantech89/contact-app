@@ -6,7 +6,7 @@ const Messages = () => {
 	const [messages, dispatch] = useState([]);
 	useEffect(() => {
 		fetchSms()
-			.then(messages => dispatch(messages))
+			.then(bulkMessages => dispatch([...bulkMessages]))
 			.catch(error => console.log(error));
 	}, []);
 
